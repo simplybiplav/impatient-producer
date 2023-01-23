@@ -66,7 +66,7 @@ int consumer(queue<Message>& request,queue<Message> reply)
         {
             Message m = request.front();
             request.pop();
-            sleep(rand() %5); // mimicing io-operation with sleep
+            sleep( m.device_id %5); // mimicing io-operation with sleep
             reply.push(m);
         }
     }
